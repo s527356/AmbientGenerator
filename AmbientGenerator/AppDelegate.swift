@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  AmbientGenerator
 //
-//  Created by Keenan Piveral-Brooks on 2/17/19.
-//  Copyright © 2019 Keenan Piveral-Brooks. All rights reserved.
+//  Created by Keenan Piveral-Brooks on 2/19/19.
+//  Copyright © 2019 iOS Final Group. All rights reserved.
 //
 
 import UIKit
