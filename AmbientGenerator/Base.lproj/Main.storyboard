@@ -31,13 +31,81 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHe-e6-rff">
+                                <rect key="frame" x="155" y="134" width="64" height="22"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="saF-Hb-dMq">
+                                <rect key="frame" x="48" y="273" width="279" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Melody" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2L2-be-Gek">
+                                <rect key="frame" x="155" y="234" width="99" height="22"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oLO-Zz-gwd">
+                                <rect key="frame" x="48" y="369" width="279" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chaos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTf-QI-07k">
+                                <rect key="frame" x="155" y="330" width="64" height="22"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ITe-3v-WCk">
+                                <rect key="frame" x="48" y="479" width="279" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Energy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiH-qa-xfN">
+                                <rect key="frame" x="155" y="440" width="82" height="22"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="A52-SW-Os7">
+                                <rect key="frame" x="48" y="172" width="279" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="xHe-e6-rff" secondAttribute="bottom" constant="462" id="25G-6n-EB5"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="oLO-Zz-gwd" secondAttribute="trailing" constant="50" id="3yI-2t-xfK"/>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="fiH-qa-xfN" secondAttribute="bottom" constant="156" id="6x8-JT-px2"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="saF-Hb-dMq" secondAttribute="bottom" constant="315" id="A89-Ip-71c"/>
+                            <constraint firstItem="xHe-e6-rff" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="114" id="C9l-u7-fhT"/>
+                            <constraint firstItem="ITe-3v-WCk" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="459" id="CYv-RM-WoU"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="saF-Hb-dMq" secondAttribute="trailing" constant="50" id="FQp-1L-4Om"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="lTf-QI-07k" secondAttribute="bottom" constant="266" id="GoJ-hB-sZd"/>
+                            <constraint firstItem="oLO-Zz-gwd" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="50" id="J6K-BC-AzZ"/>
+                            <constraint firstItem="A52-SW-Os7" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="152" id="KZ6-Fn-TCT"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="A52-SW-Os7" secondAttribute="trailing" constant="50" id="Lel-tn-3Ht"/>
+                            <constraint firstItem="fiH-qa-xfN" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="420" id="LgO-Jm-ZuA"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="ITe-3v-WCk" secondAttribute="bottom" constant="109" id="LyF-DO-QEg"/>
+                            <constraint firstItem="saF-Hb-dMq" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="50" id="OHX-0J-QXV"/>
+                            <constraint firstItem="oLO-Zz-gwd" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="349" id="Pky-6V-YD1"/>
+                            <constraint firstItem="ITe-3v-WCk" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="50" id="RLv-pz-EZa"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="ITe-3v-WCk" secondAttribute="trailing" constant="50" id="Rsl-ZC-RY2"/>
+                            <constraint firstItem="A52-SW-Os7" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="50" id="Tq5-Wo-5sX"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="fiH-qa-xfN" secondAttribute="trailing" constant="156" id="U6d-Jn-uAd"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="2L2-be-Gek" secondAttribute="trailing" constant="156" id="YAA-7u-Tk8"/>
+                            <constraint firstItem="2L2-be-Gek" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="214" id="cCh-UE-rBJ"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" constant="292" id="exm-UA-ej4"/>
+                            <constraint firstItem="lTf-QI-07k" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="155" id="fNg-OO-wGP"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="lTf-QI-07k" secondAttribute="trailing" constant="156" id="iCz-W0-5fY"/>
+                            <constraint firstItem="2L2-be-Gek" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="155" id="kaE-2V-T2C"/>
+                            <constraint firstItem="fiH-qa-xfN" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="155" id="keM-ER-3qI"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="A52-SW-Os7" secondAttribute="bottom" constant="416" id="ltv-9g-cK1"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="xHe-e6-rff" secondAttribute="trailing" constant="156" id="mVj-DA-gNp"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="2L2-be-Gek" secondAttribute="bottom" constant="362" id="rnU-pu-neG"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="oLO-Zz-gwd" secondAttribute="bottom" constant="219" id="siS-V3-zIM"/>
+                            <constraint firstItem="saF-Hb-dMq" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="253" id="tWo-Sw-92g"/>
+                            <constraint firstItem="xHe-e6-rff" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="155" id="uNp-is-GfY"/>
+                            <constraint firstItem="lTf-QI-07k" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="310" id="uuk-Lw-gAk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -45,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.60000000000002" y="-397.15142428785612"/>
         </scene>
         <!--Timer-->
         <scene sceneID="bZm-Gp-Pvz">
@@ -83,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ypf-8F-Iua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1475" y="2"/>
+            <point key="canvasLocation" x="1466" y="0.0"/>
         </scene>
         <!--Loops-->
         <scene sceneID="wg7-f3-ORb">
@@ -120,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="750" y="473"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
