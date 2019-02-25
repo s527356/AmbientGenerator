@@ -13,9 +13,13 @@
 		CD113604221C886400F38C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD113602221C886400F38C24 /* Main.storyboard */; };
 		CD113606221C886500F38C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD113605221C886500F38C24 /* Assets.xcassets */; };
 		CD113609221C886500F38C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD113607221C886500F38C24 /* LaunchScreen.storyboard */; };
+		F7DDEC3D2F9C6455DEFAFC83 /* Pods_AmbientGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C004B220E6DDB319346CAC52 /* Pods_AmbientGenerator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F7589724C166805E71B1925 /* Pods-AmbientGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmbientGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-AmbientGenerator/Pods-AmbientGenerator.release.xcconfig"; sourceTree = "<group>"; };
+		BA7CB9FF2C47F7FE9258B7C1 /* Pods-AmbientGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmbientGenerator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AmbientGenerator/Pods-AmbientGenerator.debug.xcconfig"; sourceTree = "<group>"; };
+		C004B220E6DDB319346CAC52 /* Pods_AmbientGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmbientGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1135F9221C886400F38C24 /* AmbientGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmbientGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1135FC221C886400F38C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD1135FE221C886400F38C24 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7DDEC3D2F9C6455DEFAFC83 /* Pods_AmbientGenerator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		627AA75E015BEA99D39E9257 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C004B220E6DDB319346CAC52 /* Pods_AmbientGenerator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C19214445EDEFEC99DA69167 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA7CB9FF2C47F7FE9258B7C1 /* Pods-AmbientGenerator.debug.xcconfig */,
+				9F7589724C166805E71B1925 /* Pods-AmbientGenerator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CD1135F0221C886400F38C24 = {
 			isa = PBXGroup;
 			children = (
 				CD1135FB221C886400F38C24 /* AmbientGenerator */,
 				CD1135FA221C886400F38C24 /* Products */,
+				C19214445EDEFEC99DA69167 /* Pods */,
+				627AA75E015BEA99D39E9257 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD11360D221C886500F38C24 /* Build configuration list for PBXNativeTarget "AmbientGenerator" */;
 			buildPhases = (
+				8BAA0E9F542DDD54AE37E3D5 /* [CP] Check Pods Manifest.lock */,
 				CD1135F5221C886400F38C24 /* Sources */,
 				CD1135F6221C886400F38C24 /* Frameworks */,
 				CD1135F7221C886400F38C24 /* Resources */,
@@ -132,6 +157,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8BAA0E9F542DDD54AE37E3D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AmbientGenerator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD1135F5221C886400F38C24 /* Sources */ = {
@@ -284,6 +330,7 @@
 		};
 		CD11360E221C886500F38C24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA7CB9FF2C47F7FE9258B7C1 /* Pods-AmbientGenerator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,6 +352,7 @@
 		};
 		CD11360F221C886500F38C24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F7589724C166805E71B1925 /* Pods-AmbientGenerator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
