@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CD1135FD221C886400F38C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1135FC221C886400F38C24 /* AppDelegate.swift */; };
-		CD1135FF221C886400F38C24 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1135FE221C886400F38C24 /* FirstViewController.swift */; };
-		CD113601221C886400F38C24 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD113600221C886400F38C24 /* SecondViewController.swift */; };
+		CD1135FF221C886400F38C24 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1135FE221C886400F38C24 /* GeneratorViewController.swift */; };
+		CD113601221C886400F38C24 /* LoopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD113600221C886400F38C24 /* LoopViewController.swift */; };
 		CD113604221C886400F38C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD113602221C886400F38C24 /* Main.storyboard */; };
 		CD113606221C886500F38C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD113605221C886500F38C24 /* Assets.xcassets */; };
 		CD113609221C886500F38C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD113607221C886500F38C24 /* LaunchScreen.storyboard */; };
+		CD44286A2224F08D0052A425 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4428692224F08D0052A425 /* TimerViewController.swift */; };
 		F7DDEC3D2F9C6455DEFAFC83 /* Pods_AmbientGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C004B220E6DDB319346CAC52 /* Pods_AmbientGenerator.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +23,13 @@
 		C004B220E6DDB319346CAC52 /* Pods_AmbientGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmbientGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1135F9221C886400F38C24 /* AmbientGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmbientGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1135FC221C886400F38C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD1135FE221C886400F38C24 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		CD113600221C886400F38C24 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CD1135FE221C886400F38C24 /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
+		CD113600221C886400F38C24 /* LoopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopViewController.swift; sourceTree = "<group>"; };
 		CD113603221C886400F38C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD113605221C886500F38C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD113608221C886500F38C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD11360A221C886500F38C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD4428692224F08D0052A425 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				CD1135FC221C886400F38C24 /* AppDelegate.swift */,
-				CD1135FE221C886400F38C24 /* FirstViewController.swift */,
-				CD113600221C886400F38C24 /* SecondViewController.swift */,
+				CD1135FE221C886400F38C24 /* GeneratorViewController.swift */,
+				CD113600221C886400F38C24 /* LoopViewController.swift */,
+				CD4428692224F08D0052A425 /* TimerViewController.swift */,
 				CD113602221C886400F38C24 /* Main.storyboard */,
 				CD113605221C886500F38C24 /* Assets.xcassets */,
 				CD113607221C886500F38C24 /* LaunchScreen.storyboard */,
@@ -184,9 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD113601221C886400F38C24 /* SecondViewController.swift in Sources */,
+				CD44286A2224F08D0052A425 /* TimerViewController.swift in Sources */,
+				CD113601221C886400F38C24 /* LoopViewController.swift in Sources */,
 				CD1135FD221C886400F38C24 /* AppDelegate.swift in Sources */,
-				CD1135FF221C886400F38C24 /* FirstViewController.swift in Sources */,
+				CD1135FF221C886400F38C24 /* GeneratorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
