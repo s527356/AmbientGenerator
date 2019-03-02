@@ -9,6 +9,16 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    
+    @IBOutlet weak var droneLBL: UILabel!
+    
+    
+    @IBAction func droneSlider(_ sender: UISlider) {
+        
+        droneLBL.text = String(sender.value)
+    }
+    
+    
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
