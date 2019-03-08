@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../sound1.mp3">
+   </FileRef>
+   <FileRef
       location = "group:AmbientGenerator.xcodeproj">
    </FileRef>
    <FileRef
