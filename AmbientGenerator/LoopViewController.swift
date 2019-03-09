@@ -12,9 +12,12 @@ import AVFoundation
 class SecondViewController: UIViewController {
     
     var musicEffect: AVAudioPlayer = AVAudioPlayer()
+    var music: AVAudioPlayer = AVAudioPlayer()
+    
+
     
    override func viewDidLoad() {
-		super.viewDidLoad()
+        super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 	let musicFile = Bundle.main.path(forResource: "sound1", ofType: ".mp3")
     do {
@@ -24,21 +27,40 @@ class SecondViewController: UIViewController {
         print(error)
     }
 
-}
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-}
     
-    @IBAction func playMusic(_ sender: Any) {
+
+    func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+
+    
+        func playMusic(_ sender: Any) {
     musicEffect.play()
+           
     }
 
 
-    @IBAction func stopMusic(_ sender: Any) {
+        func stopMusic(_ sender: Any) {
     musicEffect.stop()
     }
     
-
+    
+    
+        let musicFilee = Bundle.main.path(forResource: "sound2", ofType: ".mp3")
+    
+        do {
+            try music = AVAudioPlayer(contentsOf: URL (fileURLWithPath: musicFilee!))
+        }
+        catch {
+            print(error)
+        }
+        
+        
+        
+//        func playMusicc(_ sender: Any) {
+//            music.play()
+//        }
+        
+}
 }
 
+}
