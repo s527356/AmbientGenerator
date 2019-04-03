@@ -18,6 +18,9 @@
 		CD113606221C886500F38C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD113605221C886500F38C24 /* Assets.xcassets */; };
 		CD113609221C886500F38C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD113607221C886500F38C24 /* LaunchScreen.storyboard */; };
 		CD44286A2224F08D0052A425 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4428692224F08D0052A425 /* TimerViewController.swift */; };
+		F6C6BAF12254471800FA1719 /* Sound4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6C6BAF02254471800FA1719 /* Sound4.mp3 */; };
+		F6C6BAF32254472500FA1719 /* Sound5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6C6BAF22254472500FA1719 /* Sound5.mp3 */; };
+		F6C6BAF52254473000FA1719 /* Sound6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6C6BAF42254472F00FA1719 /* Sound6.mp3 */; };
 		F6EBCC2E222F2B8D0032521F /* generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EBCC2D222F2B8D0032521F /* generator.swift */; };
 		F7DDEC3D2F9C6455DEFAFC83 /* Pods_AmbientGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C004B220E6DDB319346CAC52 /* Pods_AmbientGenerator.framework */; };
 /* End PBXBuildFile section */
@@ -39,6 +42,9 @@
 		CD113608221C886500F38C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD11360A221C886500F38C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4428692224F08D0052A425 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		F6C6BAF02254471800FA1719 /* Sound4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound4.mp3; sourceTree = "<group>"; };
+		F6C6BAF22254472500FA1719 /* Sound5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound5.mp3; sourceTree = "<group>"; };
+		F6C6BAF42254472F00FA1719 /* Sound6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound6.mp3; sourceTree = "<group>"; };
 		F6EBCC2D222F2B8D0032521F /* generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +102,10 @@
 			children = (
 				CD1135FC221C886400F38C24 /* AppDelegate.swift */,
 				CD1135FE221C886400F38C24 /* GeneratorViewController.swift */,
+				F6C6BAF42254472F00FA1719 /* Sound6.mp3 */,
 				3F51EC842231D2E7004F27EB /* sound1.mp3 */,
+				F6C6BAF02254471800FA1719 /* Sound4.mp3 */,
+				F6C6BAF22254472500FA1719 /* Sound5.mp3 */,
 				CD113600221C886400F38C24 /* LoopViewController.swift */,
 				CD4428692224F08D0052A425 /* TimerViewController.swift */,
 				CD113602221C886400F38C24 /* Main.storyboard */,
@@ -175,6 +184,9 @@
 				3FB453AE2234A7BE00E70E79 /* Sound2.mp3 in Resources */,
 				3FB453B02234AAEF00E70E79 /* Sound3.mp3 in Resources */,
 				CD113604221C886400F38C24 /* Main.storyboard in Resources */,
+				F6C6BAF32254472500FA1719 /* Sound5.mp3 in Resources */,
+				F6C6BAF52254473000FA1719 /* Sound6.mp3 in Resources */,
+				F6C6BAF12254471800FA1719 /* Sound4.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

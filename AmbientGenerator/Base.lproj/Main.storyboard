@@ -430,6 +430,9 @@
                                 <state key="normal" title="on">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="playMusic4:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="zer-sc-bb3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mc6-j9-kkb">
                                 <rect key="frame" x="316" y="433" width="30" height="31"/>
@@ -437,6 +440,9 @@
                                 <state key="normal" title="off">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="stopMusic4:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="kMh-cf-VLb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72e-dW-bZL">
                                 <rect key="frame" x="316" y="486" width="30" height="32"/>
@@ -444,6 +450,9 @@
                                 <state key="normal" title="off">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="stopMusic5:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="h07-JL-Nof"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxp-bK-Tj5">
                                 <rect key="frame" x="316" y="542" width="30" height="31"/>
@@ -451,6 +460,9 @@
                                 <state key="normal" title="off">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="stopMusic6:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="aF3-zV-k5v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lm2-ox-2UB">
                                 <rect key="frame" x="268" y="487" width="30" height="30"/>
@@ -458,6 +470,9 @@
                                 <state key="normal" title="on">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="playMusic5:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="GJn-4f-92T"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBk-Dh-E36">
                                 <rect key="frame" x="268" y="542" width="30" height="31"/>
@@ -465,6 +480,9 @@
                                 <state key="normal" title="on">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="playMusic6:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Y1X-UU-dHW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
