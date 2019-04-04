@@ -10,7 +10,7 @@ import UIKit
 import AudioKit
 
 class FirstViewController: UIViewController {
-	
+
 	let audioGenerator = AudioGenerator.shared
 	
 	@IBOutlet weak var droneLBL: UILabel!
@@ -40,12 +40,16 @@ class FirstViewController: UIViewController {
 	
 	var oscillator = AKOscillator()
 	@IBAction func testBN(_ sender: Any) {
-		if oscillator.isPlaying {
-			oscillator.stop()
-		} else {
-			oscillator.amplitude = random(in: 0.5...1)
-			oscillator.frequency = random(in: 220...880)
-			oscillator.start()
+		oscillator.amplitude = random(in: 0.5...1)
+		oscillator.frequency = random(in: 220...880)
+		Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
+			if self.oscillator.isStarted {
+				self.oscillator.stop()
+				print("Test Stop")
+			} else {
+				self.oscillator.start()
+				print("Test Start")
+			}
 		}
 	}
 	
