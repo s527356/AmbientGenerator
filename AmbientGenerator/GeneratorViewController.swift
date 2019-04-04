@@ -40,10 +40,10 @@ class FirstViewController: UIViewController {
 	
 	var oscillator = AKOscillator()
 	@IBAction func testBN(_ sender: Any) {
-		oscillator.amplitude = random(in: 0.5...1)
-		oscillator.frequency = random(in: 220...880)
+		let scaleMidiNoteNumbers: [MIDINoteNumber] = [60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
 		Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
 			if self.oscillator.isStarted {
+				self.oscillator.frequency = scaleMidiNoteNumbers.randomElement()!.midiNoteToFrequency()
 				self.oscillator.stop()
 				print("Test Stop")
 			} else {
