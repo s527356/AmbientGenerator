@@ -8,40 +8,69 @@
 
 import UIKit
 
+
+
 class TimerViewController: UIViewController {
     
     
     @IBOutlet weak var Reset: UIButton!
-    
-    @IBOutlet weak var Timer: UILabel!
-    
+    @IBOutlet weak var timer: UITextField!
     @IBOutlet weak var Pausebutton: UIButton!
-    
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var StopButton: UIButton!
     
-    
+    var counter = 0
+    var timer1 = Timer()
+
+//    timer1 = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(delayedAction), userInfo: nil, repeats: false)
     
     @IBAction func Pause(_ sender: Any) {
-        
+        timer1.invalidate()
         print("Pause")
     
     }
     
     @IBAction func Stop(_ sender: Any) {
-        print("Stop")
+        if timer != nil
+        {
+       timer1.invalidate()
+        }
     }
     
     @IBAction func ResetButton(_ sender: Any) {
+        if timer != nil
+        {
+        timer.text = "\(0)"
        print("ResetButton")
-        
+        }
     }
     
     @IBAction func Start(_ sender: Any) {
+        if timer != nil
+        {
         print("Start")
+        timer1.invalidate() // just in case this button is tapped multiple times
+        // start the timer
+        timer1 = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        }
         }
         
-    
+    @objc func timerAction() {
+       // counter += 1
+        if timer != nil
+        {
+        counter = Int(timer.text!)!
+        if counter != 0
+        {
+        counter = counter - 1
+        timer.text = "\(counter)"
+        }
+        else
+        {
+          timer1.invalidate()
+        }
+        }
+    }
 
     
     override func viewDidLoad() {
