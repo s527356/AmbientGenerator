@@ -11,6 +11,7 @@
 		3F51EC852231D2E7004F27EB /* sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F51EC842231D2E7004F27EB /* sound1.mp3 */; };
 		3FB453AE2234A7BE00E70E79 /* Sound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FB453AD2234A7BE00E70E79 /* Sound2.mp3 */; };
 		3FB453B02234AAEF00E70E79 /* Sound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FB453AF2234AAEF00E70E79 /* Sound3.mp3 */; };
+		3FF630322256E303000C1749 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF630312256E303000C1749 /* Sounds.swift */; };
 		CD1135FD221C886400F38C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1135FC221C886400F38C24 /* AppDelegate.swift */; };
 		CD1135FF221C886400F38C24 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1135FE221C886400F38C24 /* GeneratorViewController.swift */; };
 		CD113601221C886400F38C24 /* LoopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD113600221C886400F38C24 /* LoopViewController.swift */; };
@@ -30,6 +31,7 @@
 		3F51EC842231D2E7004F27EB /* sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound1.mp3; sourceTree = "<group>"; };
 		3FB453AD2234A7BE00E70E79 /* Sound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound2.mp3; sourceTree = "<group>"; };
 		3FB453AF2234AAEF00E70E79 /* Sound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound3.mp3; sourceTree = "<group>"; };
+		3FF630312256E303000C1749 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		9F7589724C166805E71B1925 /* Pods-AmbientGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmbientGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-AmbientGenerator/Pods-AmbientGenerator.release.xcconfig"; sourceTree = "<group>"; };
 		BA7CB9FF2C47F7FE9258B7C1 /* Pods-AmbientGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmbientGenerator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AmbientGenerator/Pods-AmbientGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 		C004B220E6DDB319346CAC52 /* Pods_AmbientGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmbientGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +117,7 @@
 				CD113607221C886500F38C24 /* LaunchScreen.storyboard */,
 				CD11360A221C886500F38C24 /* Info.plist */,
 				F6EBCC2D222F2B8D0032521F /* generator.swift */,
+				3FF630312256E303000C1749 /* Sounds.swift */,
 			);
 			path = AmbientGenerator;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				CD44286A2224F08D0052A425 /* TimerViewController.swift in Sources */,
 				CD113601221C886400F38C24 /* LoopViewController.swift in Sources */,
 				CD1135FD221C886400F38C24 /* AppDelegate.swift in Sources */,
+				3FF630322256E303000C1749 /* Sounds.swift in Sources */,
 				F6EBCC2E222F2B8D0032521F /* generator.swift in Sources */,
 				CD1135FF221C886400F38C24 /* GeneratorViewController.swift in Sources */,
 			);

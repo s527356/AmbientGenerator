@@ -173,7 +173,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Generator" image="first" selectedImage="generator" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Generator" image="generator" selectedImage="generator" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="chaosLBL" destination="kwO-ka-4re" id="iJ3-OH-jDm"/>
                         <outlet property="droneLBL" destination="y88-nj-miI" id="bFs-Od-3h1"/>
@@ -200,14 +200,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN2-Ox-yf9">
-                                <rect key="frame" x="245" y="191" width="49" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzh-cZ-8X2">
+                                <rect key="frame" x="81" y="261" width="83" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Stop">
-                                    <color key="titleColor" red="1" green="0.079859433640000005" blue="0.070306313479999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <state key="normal" title="Pause"/>
                                 <connections>
-                                    <action selector="Stop:" destination="UEQ-fv-Iqn" eventType="touchUpInside" id="Cki-ba-ZQJ"/>
+                                    <action selector="Pause:" destination="UEQ-fv-Iqn" eventType="touchUpInside" id="UmE-28-lOH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lX3-1e-aqz">
@@ -238,12 +236,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzh-cZ-8X2">
-                                <rect key="frame" x="81" y="261" width="83" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN2-Ox-yf9">
+                                <rect key="frame" x="237" y="191" width="49" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Pause"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="1" green="0.079859433640000005" blue="0.070306313479999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="Pause:" destination="UEQ-fv-Iqn" eventType="touchUpInside" id="UmE-28-lOH"/>
+                                    <action selector="Stop:" destination="UEQ-fv-Iqn" eventType="touchUpInside" id="Cki-ba-ZQJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -261,7 +261,7 @@
                             <constraint firstItem="Jgf-2I-aDk" firstAttribute="centerX" secondItem="1rk-eT-COd" secondAttribute="centerX" id="cMF-me-jYM"/>
                             <constraint firstItem="ce5-it-cVV" firstAttribute="leading" secondItem="bnY-kN-jeo" secondAttribute="leading" constant="81" id="ear-g8-CxZ"/>
                             <constraint firstItem="ce5-it-cVV" firstAttribute="baseline" secondItem="yN2-Ox-yf9" secondAttribute="baseline" id="ed1-tl-cWY"/>
-                            <constraint firstItem="bnY-kN-jeo" firstAttribute="trailing" secondItem="yN2-Ox-yf9" secondAttribute="trailing" constant="81" id="fR8-Ci-9l1"/>
+                            <constraint firstItem="bnY-kN-jeo" firstAttribute="trailing" secondItem="yN2-Ox-yf9" secondAttribute="trailing" constant="89" id="fR8-Ci-9l1"/>
                             <constraint firstItem="Tzh-cZ-8X2" firstAttribute="leading" secondItem="bnY-kN-jeo" secondAttribute="leading" constant="81" id="iUN-jT-akm"/>
                             <constraint firstItem="u3Y-Ms-GIH" firstAttribute="top" secondItem="Jgf-2I-aDk" secondAttribute="bottom" constant="56" id="kIP-SR-Rb2"/>
                             <constraint firstItem="lX3-1e-aqz" firstAttribute="leading" secondItem="Tzh-cZ-8X2" secondAttribute="trailing" constant="64" id="lqV-QF-6sw"/>
@@ -271,7 +271,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bnY-kN-jeo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Timer" selectedImage="timer" id="tuL-he-uv4"/>
+                    <tabBarItem key="tabBarItem" title="Timer" image="timer" selectedImage="timer" id="tuL-he-uv4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="Pausebutton" destination="Tzh-cZ-8X2" id="y4H-1F-lFO"/>
@@ -563,7 +563,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Loops" image="second" selectedImage="loops" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Loops" image="loops" selectedImage="loops" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -590,10 +590,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
         <image name="generator" width="32" height="32"/>
         <image name="loops" width="32" height="32"/>
-        <image name="second" width="30" height="30"/>
         <image name="timer" width="32" height="32"/>
     </resources>
 </document>
