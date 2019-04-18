@@ -38,32 +38,40 @@ class FirstViewController: UIViewController {
 		energyLBL.text=String(Int(sender.value))
 	}
 	
-	var oscillator = AKOscillator()
+	var oscillator = AKOscillatorBank()
+	var att: Double = 0.05 //Attack
+	var dec: Double	= 0.3 //Decay
+	var sus: Double	= 0 //Sustain
+	var rel: Double	= 0.1 //Release
+	var previousNote: MIDINoteNumber = 0
+	let scaleMidiNoteNumbers: [MIDINoteNumber] = [60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
+	
 	@IBAction func testBN(_ sender: Any) {
-		let scaleMidiNoteNumbers: [MIDINoteNumber] = [60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
-		Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
-			if self.oscillator.isStarted {
-				self.oscillator.frequency = scaleMidiNoteNumbers.randomElement()!.midiNoteToFrequency()
-				self.oscillator.stop()
-				print("Test Stop")
-			} else {
-				self.oscillator.start()
-				print("Test Start")
-			}
+		var ambientRepeater = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) {_ in
+			self.oscillator.attackDuration = self.att
+			self.oscillator.decayDuration = self.dec
+			self.oscillator.sustainLevel = self.sus
+			self.oscillator.releaseDuration = self.rel
+			
+			let randomNote = self.scaleMidiNoteNumbers.randomElement()!
+			self.oscillator.stop(noteNumber: self.previousNote)
+			self.oscillator.play(noteNumber: randomNote, velocity: 100)
+			self.previousNote = randomNote
+			print("Playing \(randomNote)")
 		}
 	}
-	
+
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		AudioKit.output = AKMixer(oscillator)
+		let delay = AKDelay(AKMixer(self.oscillator), time: 0.5, feedback: 0.6, lowPassCutoff: 15000.0, dryWetMix: 90)
+		AudioKit.output = delay
 		do {
 			try AudioKit.start()
 		} catch {
 			print("Error starting AudioKit")
 		}
 	}
-	
-	
+
 }
 
