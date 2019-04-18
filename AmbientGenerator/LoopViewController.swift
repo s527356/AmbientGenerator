@@ -7,9 +7,12 @@
 //
 
 import UIKit
-import AVFoundation
+//import AVFoundation
 
 class SecondViewController: UIViewController {
+    
+    // From this link i used music 
+    //(https://stationarytravels.wordpress.com/2014/12/17/travelogue-2014-top-10-ambient-drone-soundscape/)
    
     var value1:TimerViewController!
 //    var musicEffect: AVAudioPlayer = AVAudioPlayer()
@@ -73,7 +76,7 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func stopMusic2(_ sender: Any) {
-        Sounds.sounds.musicEffect2.play()
+        Sounds.sounds.musicEffect2.stop()
     }
     
     
