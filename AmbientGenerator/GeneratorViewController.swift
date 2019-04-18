@@ -44,10 +44,11 @@ class FirstViewController: UIViewController {
 	var sus: Double	= 0 //Sustain
 	var rel: Double	= 0.1 //Release
 	var previousNote: MIDINoteNumber = 0
-	let scaleMidiNoteNumbers: [MIDINoteNumber] = [60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
+	let scaleMidiNoteNumbers: [MIDINoteNumber] = [72, 74, 76, 77, 79, 81, 83] //C major scale
 	
 	@IBAction func testBN(_ sender: Any) {
-		var ambientRepeater = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) {_ in
+		let _ = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) {_ in //should be renamed in order to close timer using .invalidate()
+			
 			self.oscillator.attackDuration = self.att
 			self.oscillator.decayDuration = self.dec
 			self.oscillator.sustainLevel = self.sus
@@ -64,7 +65,7 @@ class FirstViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		let delay = AKDelay(AKMixer(self.oscillator), time: 0.5, feedback: 0.6, lowPassCutoff: 15000.0, dryWetMix: 90)
+		let delay = AKDelay(AKMixer(self.oscillator), time: 1, feedback: 0.6, lowPassCutoff: 15000.0, dryWetMix: 90)
 		AudioKit.output = delay
 		do {
 			try AudioKit.start()
