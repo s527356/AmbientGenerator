@@ -38,20 +38,32 @@ class FirstViewController: UIViewController {
 		energyLBL.text=String(Int(sender.value))
 	}
 	
-	var oscillator = AKOscillator()
-	@IBAction func testBN(_ sender: Any) {
-		let scaleMidiNoteNumbers: [MIDINoteNumber] = [60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
-		Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
-			if self.oscillator.isStarted {
-				self.oscillator.frequency = scaleMidiNoteNumbers.randomElement()!.midiNoteToFrequency()
-				self.oscillator.stop()
-				print("Test Stop")
-			} else {
-				self.oscillator.start()
-				print("Test Start")
-			}
-		}
-	}
+    @IBOutlet weak var testBTN: UIButton!
+    var oscillator = AKOscillator()
+    @IBAction func testBN(_ sender: Any) {
+        var timer:Timer = Timer()
+        if testBTN.title(for: UIControl.State.normal) == "Test" {
+            print("Start")
+            testBTN.setTitle("Stop Test", for: UIControl.State.normal)
+            let scaleMidiNoteNumbers: [MIDINoteNumber] = [60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {t in
+                if self.oscillator.isStarted {
+                    self.oscillator.frequency = scaleMidiNoteNumbers.randomElement()!.midiNoteToFrequency()
+                    self.oscillator.stop()
+                    print("Test Stop")
+                } else {
+                    self.oscillator.start()
+                    print("Test Start")
+                }
+                if self.testBTN.title(for: UIControl.State.normal) == "Test" {
+                    t.invalidate()
+                    self.oscillator.stop()
+                }
+            }
+        } else {
+            testBTN.setTitle("Test", for: UIControl.State.normal)
+        }
+    }
 	
 	
 	override func viewDidLoad() {
