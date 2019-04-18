@@ -76,6 +76,7 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func stopMusic2(_ sender: Any) {
+       // Sounds.sounds.musicEffect2.play()
         Sounds.sounds.musicEffect2.stop()
     }
     
