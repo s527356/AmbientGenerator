@@ -9,9 +9,7 @@
 import UIKit
 import AudioKit
 
-class FirstViewController: UIViewController {
-
-	let audioGenerator = AudioGenerator.shared
+class GeneratorViewController: UIViewController {
 	
 	@IBOutlet weak var droneLBL: UILabel!
 	@IBOutlet weak var melodyLBL: UILabel!
@@ -57,6 +55,10 @@ class FirstViewController: UIViewController {
 	
 	@IBOutlet weak var testBNT: UIButton!
 	@IBAction func testBN(_ sender: Any) {
+		startGenerator()
+	}
+	
+	func startGenerator() {
 		self.drone.attackDuration = 1.0
 		self.drone.play(noteNumber: 48, velocity: 100)
 		let _ = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) {_ in //should be renamed in order to close timer using .invalidate()
