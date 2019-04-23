@@ -54,9 +54,11 @@ class FirstViewController: UIViewController {
 	var previousNote: MIDINoteNumber = 0
 	let scaleMidiNoteNumbers: [MIDINoteNumber] = [72, 74, 76, 77, 79, 81, 83] //C major scale
 	
+	
+	@IBOutlet weak var testBNT: UIButton!
 	@IBAction func testBN(_ sender: Any) {
 		self.drone.attackDuration = 1.0
-		self.drone.play(noteNumber: 48, velocity: 60)
+		self.drone.play(noteNumber: 48, velocity: 100)
 		let _ = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) {_ in //should be renamed in order to close timer using .invalidate()
 			
 			self.oscillator.attackDuration = self.att
