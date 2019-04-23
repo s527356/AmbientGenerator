@@ -8,25 +8,6 @@
 
 import Foundation
 
-import AudioKit
-
-class AudioGenerator {
-	
-	static let shared = AudioGenerator()
-	
-	func test() {
-		var oscillator = AKOscillator()
-		AudioKit.output = oscillator      //Tell AudioKit what to output
-		do {
-			try AudioKit.start()  //Start up AudioKit
-		} catch {
-			print("Error Starting AudioKit")
-		}
-		oscillator.start()  //Start the oscillator
-		oscillator.frequency = random(in: 220...880)  //Set oscillator parameters
-	}
-}
-
 struct GeneratorController {
 	static var shared = GeneratorController()
 	var droneValue = 0
