@@ -11,30 +11,25 @@ import AudioKit
 
 class GeneratorViewController: UIViewController {
 	
-	@IBOutlet weak var droneLBL: UILabel!
-	@IBOutlet weak var melodyLBL: UILabel!
-	@IBOutlet weak var chaosLBL: UILabel!
-	@IBOutlet weak var energyLBL: UILabel!
-	
-	@IBAction func chaosSlider(_ sender: UISlider) {
-		chaosLBL.text=String(Int(sender.value))
+	@IBAction func decaySlider(_ sender: UISlider) {
+		dec = Double(sender.value) / 100
 	}
 	
-	@IBAction func melodySlider(_ sender: UISlider) {
-		melodyLBL.text=String(Int(sender.value))
+	@IBAction func pitchSlider(_ sender: UISlider) {
+		pitchOffset = MIDINoteNumber(sender.value / 10)
 	}
 	
 	@IBAction func droneSlider(_ sender: UISlider) {
-		droneLBL.text = String(Int(sender.value))
+		droneVol = Int(Int(sender.value) / 1.2)
 	}
 	
 	@IBAction func energySlider(_ sender: UISlider) {
-		energyLBL.text=String(Int(sender.value))
+		tempo = 5 - (Double(sender.value) / 20)
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		let delay = AKDelay(AKMixer(self.oscillator), time: 1, feedback: 0.6, lowPassCutoff: 15000.0, dryWetMix: 90)
+		let delay = AKDelay(AKMixer(self.oscillator, self.drone), time: delayTime, feedback: delayFeedback, lowPassCutoff: 15000.0, dryWetMix: 90)
 		AudioKit.output = delay
 		do {
 			try AudioKit.start()
@@ -45,47 +40,57 @@ class GeneratorViewController: UIViewController {
 	
 	var oscillator = AKOscillatorBank()
 	var drone = AKOscillatorBank()
+	var droneVol: Int = 0
 	var att: Double = 0.05 //Attack
 	var dec: Double	= 0.3 //Decay
 	var sus: Double	= 0 //Sustain
 	var rel: Double	= 0.1 //Release
+	var delayTime: Double = 1
+	var delayFeedback: Double = 0.6
 	var tempo: Double = 3
+	var pitchOffset: MIDINoteNumber = 0
 	var previousNote: MIDINoteNumber = 0
 	let scaleMidiNoteNumbers: [MIDINoteNumber] = [72, 74, 76, 77, 79, 81, 83] //C major scale
 	var genTimer: Timer = Timer()
 	var isStarted: Bool = false
 	
-	@IBAction func testBN(_ sender: Any) {
+	@IBOutlet weak var startBNText: UIButton!
+	
+	@IBAction func startBN(_ sender: Any) {
 		if isStarted {
 			stopGenerator()
+			startBNText.setTitle("Start", for: .normal)
 		}
 		else if !isStarted {
 			startGenerator()
+			startBNText.setTitle("Stop", for: .normal)
 		}
 	}
 	
 	func startGenerator() {
 		self.isStarted = true;
-		self.drone.attackDuration = 1.0
-		self.drone.play(noteNumber: 48, velocity: 100)
-		self.genTimer = Timer.scheduledTimer(withTimeInterval: tempo, repeats: true) {_ in //should be renamed in order to close timer using .invalidate()
+		self.drone.attackDuration = 0.1
+		self.drone.play(noteNumber: 60 + pitchOffset, velocity: MIDIVelocity(droneVol))
+		self.drone.play(noteNumber: 48 + pitchOffset, velocity: MIDIVelocity(droneVol))
+		self.genTimer = Timer.scheduledTimer(withTimeInterval: tempo, repeats: true) {_ in
 			
 			self.oscillator.attackDuration = self.att
 			self.oscillator.decayDuration = self.dec
 			self.oscillator.sustainLevel = self.sus
 			self.oscillator.releaseDuration = self.rel
 			
-			let randomNote = self.scaleMidiNoteNumbers.randomElement()!
+			let randomNote = (self.scaleMidiNoteNumbers.randomElement()!) + self.pitchOffset
 			self.oscillator.stop(noteNumber: self.previousNote)
 			self.oscillator.play(noteNumber: randomNote, velocity: 100)
 			self.previousNote = randomNote
-			print("Playing \(randomNote)")
 		}
 	}
 	
 	func stopGenerator() {
 		self.isStarted = false
 		self.genTimer.invalidate()
+		self.drone.stop(noteNumber: 60 + pitchOffset)
+		self.drone.stop(noteNumber: 48 + pitchOffset)
 	}
 }
 
