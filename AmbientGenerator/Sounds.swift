@@ -38,5 +38,11 @@ class Sounds{
 		catch {
 			print(error)
 		}
+		cityLoop.numberOfLoops = -1
+		rainLoop.numberOfLoops = -1
+		fireLoop.numberOfLoops = -1
+		restaurantLoop.numberOfLoops = -1
+		wavesLoop.numberOfLoops = -1
+		forestLoop.numberOfLoops = -1
 	}
 }
