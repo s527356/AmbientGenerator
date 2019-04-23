@@ -49,19 +49,26 @@ class GeneratorViewController: UIViewController {
 	var dec: Double	= 0.3 //Decay
 	var sus: Double	= 0 //Sustain
 	var rel: Double	= 0.1 //Release
+	var tempo: Double = 3
 	var previousNote: MIDINoteNumber = 0
 	let scaleMidiNoteNumbers: [MIDINoteNumber] = [72, 74, 76, 77, 79, 81, 83] //C major scale
+	var genTimer: Timer = Timer()
+	var isStarted: Bool = false
 	
-	
-	@IBOutlet weak var testBNT: UIButton!
 	@IBAction func testBN(_ sender: Any) {
-		startGenerator()
+		if isStarted {
+			stopGenerator()
+		}
+		else if !isStarted {
+			startGenerator()
+		}
 	}
 	
 	func startGenerator() {
+		self.isStarted = true;
 		self.drone.attackDuration = 1.0
 		self.drone.play(noteNumber: 48, velocity: 100)
-		let _ = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) {_ in //should be renamed in order to close timer using .invalidate()
+		self.genTimer = Timer.scheduledTimer(withTimeInterval: tempo, repeats: true) {_ in //should be renamed in order to close timer using .invalidate()
 			
 			self.oscillator.attackDuration = self.att
 			self.oscillator.decayDuration = self.dec
@@ -74,6 +81,11 @@ class GeneratorViewController: UIViewController {
 			self.previousNote = randomNote
 			print("Playing \(randomNote)")
 		}
+	}
+	
+	func stopGenerator() {
+		self.isStarted = false
+		self.genTimer.invalidate()
 	}
 }
 
