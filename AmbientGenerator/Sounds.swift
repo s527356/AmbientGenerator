@@ -12,28 +12,28 @@ class Sounds{
 	
 	static var sounds = Sounds()
 	
-	var musicEffect: AVAudioPlayer = AVAudioPlayer()
-	var musicEffect2: AVAudioPlayer = AVAudioPlayer()
-	var musicEffect3: AVAudioPlayer = AVAudioPlayer()
-	var musicEffect4: AVAudioPlayer = AVAudioPlayer()
-	var musicEffect5: AVAudioPlayer = AVAudioPlayer()
-	var musicEffect6: AVAudioPlayer = AVAudioPlayer()
+	var cityLoop: AVAudioPlayer = AVAudioPlayer()
+	var rainLoop: AVAudioPlayer = AVAudioPlayer()
+	var fireLoop: AVAudioPlayer = AVAudioPlayer()
+	var restaurantLoop: AVAudioPlayer = AVAudioPlayer()
+	var wavesLoop: AVAudioPlayer = AVAudioPlayer()
+	var forestLoop: AVAudioPlayer = AVAudioPlayer()
 	
 	private init(){
-		let musicFile = Bundle.main.path(forResource: "sound1", ofType: ".mp3")
-		let musicFile2 = Bundle.main.path(forResource: "Sound2", ofType: ".mp3")
-		let musicFile3 = Bundle.main.path(forResource: "Sound3", ofType: ".mp3")
-		let musicFile4 = Bundle.main.path(forResource: "Sound4", ofType: ".mp3")
-		let musicFile5 = Bundle.main.path(forResource: "Sound5", ofType: ".mp3")
-		let musicFile6 = Bundle.main.path(forResource: "Sound6", ofType: ".mp3")
+		let cityFile = Bundle.main.path(forResource: "/sounds/BusyCity", ofType: ".mp3")
+		let rainFile = Bundle.main.path(forResource: "/sounds/Rain", ofType: ".mp3")
+		let fireFile = Bundle.main.path(forResource: "/sounds/Fireplace", ofType: ".mp3")
+		let restaurantFile = Bundle.main.path(forResource: "/sounds/Restaurant", ofType: ".mp3")
+		let wavesFile = Bundle.main.path(forResource: "/sounds/Waves", ofType: ".mp3")
+		let forestFile = Bundle.main.path(forResource: "/sounds/WindyForest", ofType: ".mp3")
+		
 		do {
-			try musicEffect = AVAudioPlayer(contentsOf: URL (fileURLWithPath: musicFile!))
-			try musicEffect2 = AVAudioPlayer(contentsOf: URL (fileURLWithPath: musicFile2!))
-			try musicEffect3 = AVAudioPlayer(contentsOf: URL (fileURLWithPath: musicFile3!))
-			try musicEffect4 = AVAudioPlayer(contentsOf: URL (fileURLWithPath: musicFile4!))
-			try musicEffect5 = AVAudioPlayer(contentsOf: URL (fileURLWithPath: musicFile5!))
-			try musicEffect6 = AVAudioPlayer(contentsOf: URL (fileURLWithPath: musicFile6!))
-			
+			try cityLoop = AVAudioPlayer(contentsOf: URL (fileURLWithPath: cityFile!))
+			try rainLoop = AVAudioPlayer(contentsOf: URL (fileURLWithPath: rainFile!))
+			try fireLoop = AVAudioPlayer(contentsOf: URL (fileURLWithPath: fireFile!))
+			try restaurantLoop = AVAudioPlayer(contentsOf: URL (fileURLWithPath: restaurantFile!))
+			try wavesLoop = AVAudioPlayer(contentsOf: URL (fileURLWithPath: wavesFile!))
+			try forestLoop = AVAudioPlayer(contentsOf: URL (fileURLWithPath: forestFile!))
 		}
 		catch {
 			print(error)

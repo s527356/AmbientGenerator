@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3F51EC832231D2D7004F27EB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F51EC822231D2D7004F27EB /* AVFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		3F51EC852231D2E7004F27EB /* sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F51EC842231D2E7004F27EB /* sound1.mp3 */; };
-		3FB453AE2234A7BE00E70E79 /* Sound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FB453AD2234A7BE00E70E79 /* Sound2.mp3 */; };
-		3FB453B02234AAEF00E70E79 /* Sound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FB453AF2234AAEF00E70E79 /* Sound3.mp3 */; };
 		3FF630322256E303000C1749 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF630312256E303000C1749 /* Sounds.swift */; };
 		CD1135FD221C886400F38C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1135FC221C886400F38C24 /* AppDelegate.swift */; };
 		CD1135FF221C886400F38C24 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1135FE221C886400F38C24 /* GeneratorViewController.swift */; };
@@ -19,18 +16,13 @@
 		CD113606221C886500F38C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD113605221C886500F38C24 /* Assets.xcassets */; };
 		CD113609221C886500F38C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD113607221C886500F38C24 /* LaunchScreen.storyboard */; };
 		CD44286A2224F08D0052A425 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4428692224F08D0052A425 /* TimerViewController.swift */; };
-		F6C6BAF12254471800FA1719 /* Sound4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6C6BAF02254471800FA1719 /* Sound4.mp3 */; };
-		F6C6BAF32254472500FA1719 /* Sound5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6C6BAF22254472500FA1719 /* Sound5.mp3 */; };
-		F6C6BAF52254473000FA1719 /* Sound6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6C6BAF42254472F00FA1719 /* Sound6.mp3 */; };
+		CDBE1AA1226FA704003B2704 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = CDBE1AA0226FA704003B2704 /* sounds */; };
 		F6EBCC2E222F2B8D0032521F /* generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EBCC2D222F2B8D0032521F /* generator.swift */; };
 		F7DDEC3D2F9C6455DEFAFC83 /* Pods_AmbientGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C004B220E6DDB319346CAC52 /* Pods_AmbientGenerator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F51EC822231D2D7004F27EB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		3F51EC842231D2E7004F27EB /* sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound1.mp3; sourceTree = "<group>"; };
-		3FB453AD2234A7BE00E70E79 /* Sound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound2.mp3; sourceTree = "<group>"; };
-		3FB453AF2234AAEF00E70E79 /* Sound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound3.mp3; sourceTree = "<group>"; };
 		3FF630312256E303000C1749 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		9F7589724C166805E71B1925 /* Pods-AmbientGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmbientGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-AmbientGenerator/Pods-AmbientGenerator.release.xcconfig"; sourceTree = "<group>"; };
 		BA7CB9FF2C47F7FE9258B7C1 /* Pods-AmbientGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmbientGenerator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AmbientGenerator/Pods-AmbientGenerator.debug.xcconfig"; sourceTree = "<group>"; };
@@ -44,9 +36,7 @@
 		CD113608221C886500F38C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD11360A221C886500F38C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4428692224F08D0052A425 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
-		F6C6BAF02254471800FA1719 /* Sound4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound4.mp3; sourceTree = "<group>"; };
-		F6C6BAF22254472500FA1719 /* Sound5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound5.mp3; sourceTree = "<group>"; };
-		F6C6BAF42254472F00FA1719 /* Sound6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound6.mp3; sourceTree = "<group>"; };
+		CDBE1AA0226FA704003B2704 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sounds; sourceTree = SOURCE_ROOT; };
 		F6EBCC2D222F2B8D0032521F /* generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +92,7 @@
 		CD1135FB221C886400F38C24 /* AmbientGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				CDBE1AA0226FA704003B2704 /* sounds */,
 				CD1135FC221C886400F38C24 /* AppDelegate.swift */,
 				CD1135FE221C886400F38C24 /* GeneratorViewController.swift */,
 				CD113600221C886400F38C24 /* LoopViewController.swift */,
@@ -112,12 +103,6 @@
 				F6EBCC2D222F2B8D0032521F /* generator.swift */,
 				3FF630312256E303000C1749 /* Sounds.swift */,
 				CD113605221C886500F38C24 /* Assets.xcassets */,
-				3F51EC842231D2E7004F27EB /* sound1.mp3 */,
-				3FB453AD2234A7BE00E70E79 /* Sound2.mp3 */,
-				3FB453AF2234AAEF00E70E79 /* Sound3.mp3 */,
-				F6C6BAF02254471800FA1719 /* Sound4.mp3 */,
-				F6C6BAF22254472500FA1719 /* Sound5.mp3 */,
-				F6C6BAF42254472F00FA1719 /* Sound6.mp3 */,
 			);
 			path = AmbientGenerator;
 			sourceTree = "<group>";
@@ -181,15 +166,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDBE1AA1226FA704003B2704 /* sounds in Resources */,
 				CD113609221C886500F38C24 /* LaunchScreen.storyboard in Resources */,
 				CD113606221C886500F38C24 /* Assets.xcassets in Resources */,
-				3F51EC852231D2E7004F27EB /* sound1.mp3 in Resources */,
-				3FB453AE2234A7BE00E70E79 /* Sound2.mp3 in Resources */,
-				3FB453B02234AAEF00E70E79 /* Sound3.mp3 in Resources */,
 				CD113604221C886400F38C24 /* Main.storyboard in Resources */,
-				F6C6BAF32254472500FA1719 /* Sound5.mp3 in Resources */,
-				F6C6BAF52254473000FA1719 /* Sound6.mp3 in Resources */,
-				F6C6BAF12254471800FA1719 /* Sound4.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

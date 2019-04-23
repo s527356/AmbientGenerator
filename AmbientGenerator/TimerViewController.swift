@@ -38,12 +38,12 @@ class TimerViewController: UIViewController {
 	@IBAction func Stop(_ sender: Any) {
 		if timer != nil {
 			timer1.invalidate()
-			Sounds.sounds.musicEffect6.stop()
-			Sounds.sounds.musicEffect4.stop()
-			Sounds.sounds.musicEffect2.stop()
-			Sounds.sounds.musicEffect3.stop()
-			Sounds.sounds.musicEffect5.stop()
-			Sounds.sounds.musicEffect.stop()
+//			Sounds.sounds.musicEffect6.stop()
+//			Sounds.sounds.musicEffect4.stop()
+//			Sounds.sounds.musicEffect2.stop()
+//			Sounds.sounds.musicEffect3.stop()
+//			Sounds.sounds.musicEffect5.stop()
+//			Sounds.sounds.musicEffect.stop()
 		}
 	}
 	
@@ -51,12 +51,12 @@ class TimerViewController: UIViewController {
 		if timer != nil {
 			timer.text = "\(0)"
 			print("ResetButton")
-			Sounds.sounds.musicEffect6.stop()
-			Sounds.sounds.musicEffect4.stop()
-			Sounds.sounds.musicEffect2.stop()
-			Sounds.sounds.musicEffect3.stop()
-			Sounds.sounds.musicEffect5.stop()
-			Sounds.sounds.musicEffect.stop()
+//			Sounds.sounds.musicEffect6.stop()
+//			Sounds.sounds.musicEffect4.stop()
+//			Sounds.sounds.musicEffect2.stop()
+//			Sounds.sounds.musicEffect3.stop()
+//			Sounds.sounds.musicEffect5.stop()
+//			Sounds.sounds.musicEffect.stop()
 		}
 	}
 	
@@ -79,12 +79,12 @@ class TimerViewController: UIViewController {
 			}
 			else{
 				timer1.invalidate()
-				Sounds.sounds.musicEffect6.stop()
-				Sounds.sounds.musicEffect4.stop()
-				Sounds.sounds.musicEffect2.stop()
-				Sounds.sounds.musicEffect3.stop()
-				Sounds.sounds.musicEffect5.stop()
-				Sounds.sounds.musicEffect.stop()
+//				Sounds.sounds.musicEffect6.stop()
+//				Sounds.sounds.musicEffect4.stop()
+//				Sounds.sounds.musicEffect2.stop()
+//				Sounds.sounds.musicEffect3.stop()
+//				Sounds.sounds.musicEffect5.stop()
+//				Sounds.sounds.musicEffect.stop()
 			}
 		}
 	}
