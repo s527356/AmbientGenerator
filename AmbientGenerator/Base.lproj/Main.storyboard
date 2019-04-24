@@ -232,42 +232,42 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wtl-Be-Klr">
-                                <rect key="frame" x="255" y="148" width="49" height="31"/>
+                                <rect key="frame" x="255" y="148" width="51" height="31"/>
                                 <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="citySwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="8h7-hF-px5"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qS1-W3-3Ep">
-                                <rect key="frame" x="255" y="216" width="49" height="31"/>
+                                <rect key="frame" x="255" y="216" width="51" height="31"/>
                                 <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="fireSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="T1Y-5I-TIR"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lWF-Fw-LxI">
-                                <rect key="frame" x="255" y="284" width="49" height="31"/>
+                                <rect key="frame" x="255" y="284" width="51" height="31"/>
                                 <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="rainSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="Que-kP-gdA"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rtV-4c-SJg">
-                                <rect key="frame" x="255" y="352" width="49" height="31"/>
+                                <rect key="frame" x="255" y="352" width="51" height="31"/>
                                 <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="chatterSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="Jv9-Ou-lZ0"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EpE-TT-8Z6">
-                                <rect key="frame" x="255" y="420" width="49" height="31"/>
+                                <rect key="frame" x="255" y="420" width="51" height="31"/>
                                 <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="wavesSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="3Fc-Sr-Deg"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Amo-GL-mbt">
-                                <rect key="frame" x="255" y="488" width="49" height="31"/>
+                                <rect key="frame" x="255" y="488" width="51" height="31"/>
                                 <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="forestSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="EvQ-GN-l7I"/>
