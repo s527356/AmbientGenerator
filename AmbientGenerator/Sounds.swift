@@ -19,7 +19,7 @@ class Sounds{
 	var wavesLoop: AVAudioPlayer = AVAudioPlayer()
 	var forestLoop: AVAudioPlayer = AVAudioPlayer()
 	
-	private init(){
+	private init() {
 		let cityFile = Bundle.main.path(forResource: "/sounds/BusyCity", ofType: ".mp3")
 		let rainFile = Bundle.main.path(forResource: "/sounds/Rain", ofType: ".mp3")
 		let fireFile = Bundle.main.path(forResource: "/sounds/Fireplace", ofType: ".mp3")
@@ -38,11 +38,21 @@ class Sounds{
 		catch {
 			print(error)
 		}
+		
 		cityLoop.numberOfLoops = -1
 		rainLoop.numberOfLoops = -1
 		fireLoop.numberOfLoops = -1
 		restaurantLoop.numberOfLoops = -1
 		wavesLoop.numberOfLoops = -1
 		forestLoop.numberOfLoops = -1
+	}
+	
+	func stopAll() {
+		rainLoop.stop()
+		cityLoop.stop()
+		fireLoop.stop()
+		restaurantLoop.stop()
+		wavesLoop.stop()
+		forestLoop.stop()
 	}
 }

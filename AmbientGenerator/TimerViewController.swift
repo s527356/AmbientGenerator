@@ -12,80 +12,44 @@ import UIKit
 
 class TimerViewController: UIViewController {
 	
-	
-	@IBOutlet weak var Reset: UIButton!
-	@IBOutlet weak var timer: UITextField!
-	@IBOutlet weak var Pausebutton: UIButton!
-	@IBOutlet weak var startButton: UIButton!
-	@IBOutlet weak var StopButton: UIButton!
+	@IBOutlet weak var resetBN: UIButton!
+	@IBOutlet weak var timerTF: UITextField!
+	@IBOutlet weak var startBN: UIButton!
 	
 	var counter = 0
-	var timer1 = Timer()
+	var timer = Timer()
+	var isStarted: Bool = false
 	
-	//    timer1 = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(delayedAction), userInfo: nil, repeats: false)
+	@IBOutlet weak var startBNText: UIButton!
 	
-	@IBAction func Pause(_ sender: Any) {
-		timer1.invalidate()
-		print("Pause")
-		//        Sounds.sounds.musicEffect6.pause()
-		//        Sounds.sounds.musicEffect4.pause()
-		//        Sounds.sounds.musicEffect2.pause()
-		//        Sounds.sounds.musicEffect3.pause()
-		//        Sounds.sounds.musicEffect5.pause()
-		//        Sounds.sounds.musicEffect.pause()
-	}
-	
-	@IBAction func Stop(_ sender: Any) {
-		if timer != nil {
-			timer1.invalidate()
-//			Sounds.sounds.musicEffect6.stop()
-//			Sounds.sounds.musicEffect4.stop()
-//			Sounds.sounds.musicEffect2.stop()
-//			Sounds.sounds.musicEffect3.stop()
-//			Sounds.sounds.musicEffect5.stop()
-//			Sounds.sounds.musicEffect.stop()
+	@IBAction func startBN(_ sender: Any) {
+		if isStarted {
+			startBNText.setTitle("Start", for: .normal)
+			Sounds.sounds.stopAll()
+			timerTF.text = ""
+			counter = 0
+			isStarted = false
 		}
-	}
-	
-	@IBAction func ResetButton(_ sender: Any) {
-		if timer != nil {
-			timer.text = "\(0)"
-			print("ResetButton")
-//			Sounds.sounds.musicEffect6.stop()
-//			Sounds.sounds.musicEffect4.stop()
-//			Sounds.sounds.musicEffect2.stop()
-//			Sounds.sounds.musicEffect3.stop()
-//			Sounds.sounds.musicEffect5.stop()
-//			Sounds.sounds.musicEffect.stop()
-		}
-	}
-	
-	@IBAction func Start(_ sender: Any) {
-		if timer != nil {
-			print("Start")
-			timer1.invalidate() // just in case this button is tapped multiple times
-			// start the timer
-			timer1 = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+		else if !isStarted && !timerTF.text!.isEmpty {
+			let minutes = Int(timerTF.text!) ?? 0
+			counter = minutes * 60
+			startBNText.setTitle("Reset", for: .normal)
+			timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil,repeats: true)
+			isStarted = true
 		}
 	}
 	
 	@objc func timerAction() {
-		// counter += 1
-		if timer != nil {
-			counter = Int(timer.text!)!
-			if counter != 0{
-				counter = counter - 1
-				timer.text = "\(counter)"
-			}
-			else{
-				timer1.invalidate()
-//				Sounds.sounds.musicEffect6.stop()
-//				Sounds.sounds.musicEffect4.stop()
-//				Sounds.sounds.musicEffect2.stop()
-//				Sounds.sounds.musicEffect3.stop()
-//				Sounds.sounds.musicEffect5.stop()
-//				Sounds.sounds.musicEffect.stop()
-			}
+		if counter != 0 {
+			counter = counter - 1
+			timerTF.text = String(format: "%d:%02d", (counter / 60), (counter % 60))
+		}
+		else {
+			timer.invalidate()
+			Sounds.sounds.stopAll()
+			timerTF.text = ""
+			startBNText.setTitle("Start", for: .normal)
+			isStarted = false
 		}
 	}
 	
