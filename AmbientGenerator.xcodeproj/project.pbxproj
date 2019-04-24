@@ -17,7 +17,6 @@
 		CD113609221C886500F38C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD113607221C886500F38C24 /* LaunchScreen.storyboard */; };
 		CD44286A2224F08D0052A425 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4428692224F08D0052A425 /* TimerViewController.swift */; };
 		CDBE1AA1226FA704003B2704 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = CDBE1AA0226FA704003B2704 /* sounds */; };
-		F6EBCC2E222F2B8D0032521F /* generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EBCC2D222F2B8D0032521F /* generator.swift */; };
 		F7DDEC3D2F9C6455DEFAFC83 /* Pods_AmbientGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C004B220E6DDB319346CAC52 /* Pods_AmbientGenerator.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +36,6 @@
 		CD11360A221C886500F38C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4428692224F08D0052A425 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		CDBE1AA0226FA704003B2704 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sounds; sourceTree = SOURCE_ROOT; };
-		F6EBCC2D222F2B8D0032521F /* generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +98,6 @@
 				CD113602221C886400F38C24 /* Main.storyboard */,
 				CD113607221C886500F38C24 /* LaunchScreen.storyboard */,
 				CD11360A221C886500F38C24 /* Info.plist */,
-				F6EBCC2D222F2B8D0032521F /* generator.swift */,
 				3FF630312256E303000C1749 /* Sounds.swift */,
 				CD113605221C886500F38C24 /* Assets.xcassets */,
 			);
@@ -205,7 +202,6 @@
 				CD113601221C886400F38C24 /* LoopViewController.swift in Sources */,
 				CD1135FD221C886400F38C24 /* AppDelegate.swift in Sources */,
 				3FF630322256E303000C1749 /* Sounds.swift in Sources */,
-				F6EBCC2E222F2B8D0032521F /* generator.swift in Sources */,
 				CD1135FF221C886400F38C24 /* GeneratorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
