@@ -11,14 +11,14 @@ import AVFoundation
 class Sounds{
 	
 	static var sounds = Sounds()
-	
+	//Creates objects for audio playback
 	var cityLoop: AVAudioPlayer = AVAudioPlayer()
 	var rainLoop: AVAudioPlayer = AVAudioPlayer()
 	var fireLoop: AVAudioPlayer = AVAudioPlayer()
 	var restaurantLoop: AVAudioPlayer = AVAudioPlayer()
 	var wavesLoop: AVAudioPlayer = AVAudioPlayer()
 	var forestLoop: AVAudioPlayer = AVAudioPlayer()
-	
+	//Setup for audio playback
 	private init() {
 		let cityFile = Bundle.main.path(forResource: "/sounds/BusyCity", ofType: ".mp3")
 		let rainFile = Bundle.main.path(forResource: "/sounds/Rain", ofType: ".mp3")
@@ -38,7 +38,7 @@ class Sounds{
 		catch {
 			print(error)
 		}
-		
+		//Loops audio infinitely
 		cityLoop.numberOfLoops = -1
 		rainLoop.numberOfLoops = -1
 		fireLoop.numberOfLoops = -1
@@ -46,7 +46,7 @@ class Sounds{
 		wavesLoop.numberOfLoops = -1
 		forestLoop.numberOfLoops = -1
 	}
-	
+	//Stop all looping audio
 	func stopAll() {
 		rainLoop.stop()
 		cityLoop.stop()

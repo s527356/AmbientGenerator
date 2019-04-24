@@ -20,6 +20,7 @@ class SecondViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 	}
 	
+	//Toggles looping ambient audio on or off
 	@IBAction func citySwitch(_ sender: UISwitch) {
 		if sender.isOn { Sounds.sounds.cityLoop.play() }
 		else if !sender.isOn { Sounds.sounds.cityLoop.stop() }

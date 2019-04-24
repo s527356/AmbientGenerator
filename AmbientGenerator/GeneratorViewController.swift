@@ -11,6 +11,7 @@ import AudioKit
 
 class GeneratorViewController: UIViewController {
 	
+	//Changes values associated with slider
 	@IBAction func decaySlider(_ sender: UISlider) {
 		dec = Double(sender.value) / 100
 	}
@@ -26,15 +27,16 @@ class GeneratorViewController: UIViewController {
 	@IBAction func energySlider(_ sender: UISlider) {
 		tempo = 5 - (Double(sender.value) / 20)
 	}
-	
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		//setup everything for audiokit and effects
 		let delay = AKDelay(AKMixer(self.oscillator, self.drone), time: delayTime, feedback: delayFeedback, lowPassCutoff: 15000.0, dryWetMix: 90)
 		AudioKit.output = delay
 		do {
 			try AudioKit.start()
 		} catch {
-			print("Error starting AudioKit")
+			print("Error starting AudioKit") 
 		}
 	}
 	
@@ -56,6 +58,7 @@ class GeneratorViewController: UIViewController {
 	
 	@IBOutlet weak var startBNText: UIButton!
 	
+	//Starts and stops ambient generation
 	@IBAction func startBN(_ sender: Any) {
 		if isStarted {
 			stopGenerator()
@@ -67,6 +70,7 @@ class GeneratorViewController: UIViewController {
 		}
 	}
 	
+	//All the actual generation happens here
 	func startGenerator() {
 		self.isStarted = true;
 		self.drone.attackDuration = 0.1
@@ -78,7 +82,7 @@ class GeneratorViewController: UIViewController {
 			self.oscillator.decayDuration = self.dec
 			self.oscillator.sustainLevel = self.sus
 			self.oscillator.releaseDuration = self.rel
-			
+			//Picking the next note and playing it
 			let randomNote = (self.scaleMidiNoteNumbers.randomElement()!) + self.pitchOffset //Offset pitch from slider
 			self.oscillator.stop(noteNumber: self.previousNote) //Stops previous note because AudioKit is weird
 			self.oscillator.play(noteNumber: randomNote, velocity: 100)
@@ -86,6 +90,7 @@ class GeneratorViewController: UIViewController {
 		}
 	}
 	
+	//Stop the timer associated with ambient generation as well as drones
 	func stopGenerator() {
 		self.isStarted = false
 		self.genTimer.invalidate() //Stops generation
