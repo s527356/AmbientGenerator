@@ -22,6 +22,7 @@ class TimerViewController: UIViewController {
 	
 	@IBOutlet weak var startBNText: UIButton!
 	
+	//Flip button, change text to start stop, change flags
 	@IBAction func startBN(_ sender: Any) {
 		if isStarted {
 			startBNText.setTitle("Start", for: .normal)
@@ -39,6 +40,8 @@ class TimerViewController: UIViewController {
 		}
 	}
 	
+	
+	//Executes on every tick (1 second)
 	@objc func timerAction() {
 		if counter != 0 {
 			counter = counter - 1
